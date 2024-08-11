@@ -1,0 +1,14 @@
+
+sequenceDiagram
+    participant M as Main
+    participant C as Chalkboard
+    participant D as Drawing
+    participant S as Saving
+    M->>C: create_chalkboard()
+    C->>D: draw()
+    C->>D: erase()
+    C->>S: save()
+    C->>S: load()
+    D-->>C: return drawing
+    S-->>C: return saved work
+    C-->>M: return chalkboard
